@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Navprayas</title>
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/4/minty/bootstrap.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="{% url 'homepage_url' %}">Navprayas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'homepage_url' %}">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'homepage_url' %}">Features</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'homepage_url' %}">Pricing <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'homepage_url' %}">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="col-md-10 blogShort">
+<h2>{{ post.title }}</h2>
+<br/>
+{{post.date}}
+<br/>
+<img src="{{ post.image.url }}" alt="post img" class="pull-left img-responsive thumb margin10 img-thumbnail"/>
+<article><p>{{ post.desc }}</p></article>
+
+<a class="btn btn-blog pull-right marginBottom10" href="http://bootsnipp.com/user/snippets/2RoQ">READ MORE</a> 
+{{ post.author }}
+</div>
+<br/>
+
+</body>
+</html>
